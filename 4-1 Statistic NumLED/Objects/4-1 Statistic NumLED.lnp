@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\4-1 Statistic NumLED" 
+PRINT(".\Listings\4-1 Statistic NumLED.m51") RAMSIZE(256) 

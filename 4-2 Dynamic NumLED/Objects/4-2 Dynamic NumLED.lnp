@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\4-2 Dynamic NumLED" 
+PRINT(".\Listings\4-2 Dynamic NumLED.m51") RAMSIZE(256) 

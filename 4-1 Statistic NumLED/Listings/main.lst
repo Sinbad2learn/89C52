@@ -1,0 +1,91 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              02/19/2026 20:43:29 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: E:\Keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <regx52.h>
+   2          
+   3          unsigned char NUMBER[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F};
+   4                  
+   5          void disp(unsigned char loc, num);
+   6          
+   7          void Delay1s(unsigned int t_s);
+   8          
+   9          void main(){
+  10   1              while(1){
+  11   2                      disp(1,0);
+  12   2                      Delay1s(1);
+  13   2                      disp(2,1);
+  14   2                      Delay1s(1);
+  15   2                      disp(3,2);
+  16   2                      Delay1s(1);
+  17   2                      disp(4,3);
+  18   2                      Delay1s(1);
+  19   2                      disp(5,4);
+  20   2                      Delay1s(1);
+  21   2                      disp(6,5);
+  22   2                      Delay1s(1);
+  23   2                      disp(7,6);
+  24   2                      Delay1s(1);
+  25   2                      disp(8,7);
+  26   2                      Delay1s(1);
+  27   2                      disp(1,8);
+  28   2                      Delay1s(1);
+  29   2                      disp(2,9);
+  30   2                      Delay1s(1);
+  31   2              }
+  32   1      
+  33   1      }
+  34          
+  35          void disp(unsigned char loc, num){
+  36   1              switch(loc){
+  37   2                      case 1: P2_2 = 0; P2_3 = 0; P2_4 = 0; break;
+  38   2                      case 2: P2_2 = 1; P2_3 = 0; P2_4 = 0; break;
+  39   2                      case 3: P2_2 = 0; P2_3 = 1; P2_4 = 0; break;
+  40   2                      case 4: P2_2 = 1; P2_3 = 1; P2_4 = 0; break;
+  41   2                      case 5: P2_2 = 0; P2_3 = 0; P2_4 = 1; break;
+  42   2                      case 6: P2_2 = 1; P2_3 = 0; P2_4 = 1; break;
+  43   2                      case 7: P2_2 = 0; P2_3 = 1; P2_4 = 1; break;
+  44   2                      case 8: P2_2 = 1; P2_3 = 1; P2_4 = 1; break;
+  45   2              }
+  46   1              P0 = NUMBER[num];
+  47   1      }
+  48          
+  49          void Delay1s(unsigned int t_s)          //@12.000MHz
+  50          {
+  51   1              unsigned char i, j, k;
+  52   1              unsigned int t;
+  53   1              for(t = 0; t < t_s; t++){
+  54   2                      i = 8;
+C51 COMPILER V9.60.7.0   MAIN                                                              02/19/2026 20:43:29 PAGE 2   
+
+  55   2                      j = 154;
+  56   2                      k = 122;
+  57   2                      do
+  58   2                      {
+  59   3                              do
+  60   3                              {
+  61   4                                      while (--k);
+  62   4                              } while (--j);
+  63   3                      } while (--i);
+  64   2                      }
+  65   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    257    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
