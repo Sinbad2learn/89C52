@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\3-2 Key Control LED status" 
+PRINT(".\Listings\3-2 Key Control LED status.m51") RAMSIZE(256) 

@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\3-3 Key Contorl LED BI Num" 
+PRINT(".\Listings\3-3 Key Contorl LED BI Num.m51") RAMSIZE(256) 
